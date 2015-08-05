@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="ascendancyApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>[Developoment] Ascendancy.</title>
+
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <script>
+      window.DEBUG = true;
+    </script>
+
+    <script src="js/libs.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/ascendancy.js"></script>
+  </head>
+
+  <body ng-controller="RaceListCtrl">
+    <ul>
+      <li ng-repeat="race in races">
+        <h1>{{race.name}}</h1>
+        <p><img src="images/{{race.name}}.jpg" />{{race.desc}}</p>
+      </li>
+    </ul>
+  </body>
+</html>
