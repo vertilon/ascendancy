@@ -12,5 +12,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "angular": "~1.4.4"
+  }
 }
