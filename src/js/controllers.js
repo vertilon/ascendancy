@@ -3,6 +3,21 @@ var ascendancyControllers = angular.module('ascendancyControllers', []);
 ascendancyControllers.controller("RaceListCtrl", ['$scope', '$routeParams',
   function ($scope, $routeParams) {
     $scope.currentRace = $routeParams.raceName;
+    $scope.currentScroll = 1;
+    $scope.scrollUp = function ($scope) {
+      if ($scope.currentScroll!=1 ) {
+        $scope.currentScroll--;
+      } else {
+        $scope.currentScroll = 1;
+      }
+    }
+    $scope.scrollDown = function ($scope) {
+      if ($scope.currentScroll != 19) {
+        $scope.currentScroll++;
+      } else {
+        $scopt.currentScroll = 19;
+      }
+    }  
     $scope.races = [
       {"name": "Arbryl",
        "desc": "The Arbryls are tree-like aliens."},
