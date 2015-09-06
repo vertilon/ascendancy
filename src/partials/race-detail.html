@@ -1,0 +1,6 @@
+<div ng-repeat="race in races">
+  <div ng-if="race.name == currentRace">
+      <h1>{{race.name}}</h1>
+      <p><div class="round"><img ng-src="images/{{race.name}}.jpg" /></div>{{race.desc}}</p>
+  </div>
+</div>

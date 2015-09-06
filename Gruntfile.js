@@ -63,7 +63,8 @@ module.exports = function(grunt) {
         files: [
           { expand: true, cwd: "src/images/", src: "**/*", dest: "<%= buildDir %>/images/" },
           { expand: true, cwd: "src/fonts/", src: "**/*", dest: "<%= buildDir %>/fonts/" },
-          { expand: true, cwd: "src/sounds/", src: "**/*", dest: "<%= buildDir %>/sounds/" }
+          { expand: true, cwd: "src/sounds/", src: "**/*", dest: "<%= buildDir %>/sounds/" },
+          { expand: true, cwd: "src/partials/", src: "**/*", dest: "<%= buildDir %>/partials/" }
         ]
       },
       production: {
@@ -124,7 +125,7 @@ module.exports = function(grunt) {
         tasks: ["less:development"]
       },
       "static": {
-        files: ["src/images/**/*", "src/sounds/**/*", "src/fonts/**/*"],
+        files: ["src/partials/**/*", "src/images/**/*", "src/sounds/**/*", "src/fonts/**/*"],
         tasks: ["copy:development"]
       },
       bower: {

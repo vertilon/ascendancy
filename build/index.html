@@ -15,15 +15,7 @@
     <script src="js/ascendancy.js"></script>
   </head>
 
-  <body ng-controller="RaceListCtrl">
-    <div ng-show={{chosenRace.length}}>
-      <ul>
-        <li ng-repeat="race in races">
-          <h1>{{race.name}}</h1>
-          <p><img ng-src="images/{{race.name}}.jpg" />{{race.desc}}</p>
-          <button ng-click="chosenRace = race.name">Choose</button>
-        </li>
-      </ul>
-    </div>
+  <body>
+    <div ng-view></div>
   </body>
 </html>
