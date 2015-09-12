@@ -1,16 +1,18 @@
 <div class="race-selector-lister">
   <div class="scroll-up">
-    <button ng-click="scrollUp">&#x25B2;</button>
+    <button ng-click="scrollUp()">&#x25B2;</button>
   </div>
   <div class="scroll-down">
-    <button ng-click="scrollDown">&#x25BC;</button>
+    <button ng-click="scrollDown()">&#x25BC;</button>
   </div>
 </div>
 <div class="race-selector">
   <ul>
-    <li ng-repeat="race in races">
-      <div class="round" ng-show="race.name == races[currentScroll].name"><a href="#/race/{{race.name}}"><img ng-src="images/{{race.name}}.jpg" /></a></div>
+    <li ng-repeat="species in races">
+      <div class="round"><img ng-src="images/{{species.name}}.jpg" ng-click="currentRace = species.name"></div>
     </li>
   </ul>
-<p>{{currentScroll}}</p>
+</div>
+<div class="race-window">
+<h1>{{currentRace}}</h1>
 </div>
