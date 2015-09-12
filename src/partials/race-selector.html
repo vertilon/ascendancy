@@ -9,10 +9,14 @@
 <div class="race-selector">
   <ul>
     <li ng-repeat="species in races">
-      <div class="round"><img ng-src="images/{{species.name}}.jpg" ng-click="currentRace = species.name"></div>
+      <div class="round" ng-class='{"bordered":species.name == currentRace.name}'><img ng-src="images/{{species.name}}.jpg" ng-click="chooseRace(species.id)"></div>
     </li>
   </ul>
 </div>
 <div class="race-window">
-<h1>{{currentRace}}</h1>
+<h1>{{currentRace.name}}</h1>
+<p>{{currentRace.desc}}</p>
+</div>
+<div class="new-game">
+<h2><a href="#/new-game/{{currentRace.name}}">Begin New Game</a></h2>
 </div>

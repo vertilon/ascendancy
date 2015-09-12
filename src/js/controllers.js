@@ -38,6 +38,9 @@ ascendancyControllers.controller("RaceListCtrl", ['$scope', '$http',
         this[i] = new race(id+i);
       }
     } 
+    $scope.chooseRace = function (id) {
+      $scope.currentRace = $scope.racesData[id];
+    } 
   }]);
 
 ascendancyControllers.controller('RaceDetailCtrl', ['$scope', '$routeParams',
