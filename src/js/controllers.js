@@ -43,7 +43,7 @@ ascendancyControllers.controller("RaceListCtrl", ['$scope', '$http',
     } 
   }]);
 
-ascendancyControllers.controller('RaceDetailCtrl', ['$scope', '$routeParams',
+ascendancyControllers.controller('NewGameCtrl', ['$scope', '$routeParams',
   function ($scope, $routeParams) {
-    $scope.raceName = $routeParams.raceName;
+    $scope.raceName = $routeParams.currentRace;
   }]);

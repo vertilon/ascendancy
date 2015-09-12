@@ -10,9 +10,9 @@ ascendancyApp.config(['$routeProvider',
         templateUrl: 'partials/race-selector.html',
         controller: 'RaceListCtrl'
       }).
-      when('/race/:raceName', {
-        templateUrl: 'partials/race-detail.html',
-        controller: 'RaceListCtrl'
+      when('/new-game/:currentRace', {
+        templateUrl: 'partials/new-game.html',
+        controller: 'NewGameCtrl'
       }).
       otherwise({
         redirectTo: '/race-selector'
